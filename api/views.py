@@ -32,8 +32,6 @@ class WeatherInfoAPI(viewsets.ModelViewSet):
 
         else:
             if updateCity.timestamp < timezone.now() - timedelta(minutes=15):
-                # Bekleme mesajı döndürün
-                WeatherInfo.objects.get(city=oldCity).delete()
 
                 todayDate = (datetime.date.today() - datetime.timedelta(days=1)).strftime("%Y-%m-%d")
                 AfterSevenDayDate = (datetime.date.today() + datetime.timedelta(days=7)).strftime("%Y-%m-%d")
@@ -48,6 +46,7 @@ class WeatherInfoAPI(viewsets.ModelViewSet):
                     # yanıtın içeriğini JSON olarak oku
                     data = response.json()
 
+                    updateCity.delete()
                     # JSON verilerini WeatherInfo modeline uygun bir şekilde kaydet
                     weather = WeatherInfo(
                         city=oldCity,
