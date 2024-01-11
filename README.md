@@ -37,7 +37,7 @@ python manage.py runserver
 ## APIs
 
 - [visualcrossing](https://www.visualcrossing.com/weather/weather-data-services) - Weather Data
-- [Google Maps AutoComplete Places]- City Data
+- [Google Maps AutoComplete Places] - City Data
 
 ## License
 
