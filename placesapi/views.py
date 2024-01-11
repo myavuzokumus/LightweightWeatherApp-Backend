@@ -2,6 +2,7 @@ import requests
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from decouple import config
+from django.http import HttpResponseRedirect
 
 # Create your views here.
 @csrf_exempt

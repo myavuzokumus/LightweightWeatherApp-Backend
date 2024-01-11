@@ -16,13 +16,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from api import views
 from rest_framework import routers
 from django.views.static import serve
 import os
+from api import views
 
 router = routers.DefaultRouter(trailing_slash=False)
 router.register('weather-info', views.WeatherInfoAPI)
+
+handler404 = 'WeatherAppBackend.views.error404'
 
 FLUTTER_BASE_DIR = os.path.dirname(os.path.dirname (os.path.abspath (__file__)))
 FLUTTER_WEB_APP = os.path.join(FLUTTER_BASE_DIR, 'flutter_web_app')
