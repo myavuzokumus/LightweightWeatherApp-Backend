@@ -33,6 +33,7 @@ python manage.py runserver
 - [DateTime](https://docs.python.org/3/library/datetime.html) - Parse for datetimes.
 - [Django](https://www.djangoproject.com/) - For backend framework
 - [djangorestframework](https://www.django-rest-framework.org/) - To create own API.
+- [whitenoise](https://pypi.org/project/whitenoise/) - For Static files in live
 
 ## APIs
 
